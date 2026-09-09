@@ -1,6 +1,7 @@
 Claude Builder Receipt 🧾
 
 **Claude Builders deserve receipts.**
+
 What are you building? Who inspires you?
 
 The Claude Builder Receipt turns those answers into a personalized, shareable receipt, complete with your own Claude-generated builder archetype.
