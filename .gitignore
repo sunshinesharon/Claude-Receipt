@@ -1,0 +1,6 @@
+# Server-side files and secrets
+wordpress-endpoint.php
+wp-config.php
+.env
+.env.*
+!.env.example
