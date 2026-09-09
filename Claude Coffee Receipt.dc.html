@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Claude Builder Receipt | Keep Thinking. Keep Building.</title>
+<meta name="description" content="Create a shareable receipt of what you’re building and celebrate the builders who inspire you. Built Enthusiastically by Sharon Jacob of The Digital Buff.">
+<meta name="author" content="Sharon Jacob — The Digital Buff">
+<link rel="canonical" href="./">
+<meta property="og:site_name" content="Claude Builder Receipt">
+<meta property="og:title" content="Claude Builder Receipt | Keep Thinking. Keep Building.">
+<meta property="og:description" content="Create a shareable receipt of what you’re building and celebrate the builders who inspire you. Built Enthusiastically by Sharon Jacob of The Digital Buff.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.sharonjacob.com/wp-content/uploads/2026/09/Claude-Receipt.png">
+<meta property="og:image:secure_url" content="https://www.sharonjacob.com/wp-content/uploads/2026/09/Claude-Receipt.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="A front-facing terracotta Claude Builder Receipt device with an alphabet keyboard.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Builder Receipt | Keep Thinking. Keep Building.">
+<meta name="twitter:description" content="Create a shareable receipt of what you’re building and celebrate the builders who inspire you. Built Enthusiastically by Sharon Jacob of The Digital Buff.">
+<meta name="twitter:image" content="https://www.sharonjacob.com/wp-content/uploads/2026/09/Claude-Receipt.png">
+<meta name="twitter:image:alt" content="A front-facing terracotta Claude Builder Receipt device with an alphabet keyboard.">
+<link rel="icon" type="image/png" href="https://www.sharonjacob.com/wp-content/uploads/2026/09/Claude-Favicon.png">
+<link rel="shortcut icon" type="image/png" href="https://www.sharonjacob.com/wp-content/uploads/2026/09/Claude-Favicon.png">
+<link rel="apple-touch-icon" href="https://www.sharonjacob.com/wp-content/uploads/2026/09/Claude-Favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="./audio-assets.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  html,body{margin:0;padding:0;background:#F6F1E7;}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  button:focus,button:focus-visible{outline:none;}
+  a{color:#9E4530;text-decoration:none;font-weight:700;}
+  a:hover{text-decoration:underline;}
+  @keyframes eyeblink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.12)}}
+  @keyframes curblink{50%{opacity:0}}
+  @keyframes nudge{0%,84%,100%{transform:scale(1)}92%{transform:scale(1.06)}}
+  @keyframes feedReveal{from{grid-template-rows:0fr}to{grid-template-rows:1fr}}
+  @keyframes feedSlide{from{transform:translateY(100%)}to{transform:translateY(0)}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:radial-gradient(120% 80% at 50% 0%, #FBF7F0 0%, #F4EEE3 62%, #EDE5D8 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 40px;font-family:'Space Mono',ui-monospace,monospace;color:#4A2C1D;">
+
+  <div ref="{{ captureRef }}" style="display:flex;flex-direction:column;align-items:center;position:relative;">
+
+    <sc-if value="{{ printed }}" hint-placeholder-val="{{ false }}">
+      <div ref="{{ paperRef }}" style="{{ paperStyle }}">
+        <div style="min-height:0;animation:feedSlide 1.5s cubic-bezier(.25,.9,.3,1) both;background:#FCFAF3;color:#2E2A24;padding:20px 17px 26px;font-size:11px;line-height:1.6;box-shadow:0 6px 14px rgba(90,55,30,.10);clip-path:polygon(0% 0%,100% 0%,100% 100%,98.4% 98.9%,96.9% 100%,95.3% 98.9%,93.8% 100%,92.2% 98.9%,90.6% 100%,89.1% 98.9%,87.5% 100%,85.9% 98.9%,84.4% 100%,82.8% 98.9%,81.2% 100%,79.7% 98.9%,78.1% 100%,76.6% 98.9%,75% 100%,73.4% 98.9%,71.9% 100%,70.3% 98.9%,68.8% 100%,67.2% 98.9%,65.6% 100%,64.1% 98.9%,62.5% 100%,60.9% 98.9%,59.4% 100%,57.8% 98.9%,56.2% 100%,54.7% 98.9%,53.1% 100%,51.6% 98.9%,50% 100%,48.4% 98.9%,46.9% 100%,45.3% 98.9%,43.8% 100%,42.2% 98.9%,40.6% 100%,39.1% 98.9%,37.5% 100%,35.9% 98.9%,34.4% 100%,32.8% 98.9%,31.2% 100%,29.7% 98.9%,28.1% 100%,26.6% 98.9%,25% 100%,23.4% 98.9%,21.9% 100%,20.3% 98.9%,18.8% 100%,17.2% 98.9%,15.6% 100%,14.1% 98.9%,12.5% 100%,10.9% 98.9%,9.4% 100%,7.8% 98.9%,6.2% 100%,4.7% 98.9%,3.1% 100%,1.6% 98.9%,0% 100%);">
+          <div style="text-align:center;font-weight:700;font-size:12.5px;letter-spacing:1.5px;">CLAUDE BUILDER RECEIPT</div>
+          <hr style="border:none;border-top:1px dashed #C3B9A6;margin:12px 0;">
+          <div style="display:flex;justify-content:space-between;gap:8px;"><span style="font-size:9px;letter-spacing:.6px;opacity:.55;">DATE</span><span>{{ receipt.date }}</span></div>
+          <div style="display:flex;justify-content:space-between;gap:8px;margin-top:3px;"><span style="font-size:9px;letter-spacing:.6px;opacity:.55;">BUILDER</span><span>{{ receipt.builder }}</span></div>
+          <hr style="border:none;border-top:1px dashed #C3B9A6;margin:12px 0;">
+          <div style="font-size:9px;letter-spacing:.6px;opacity:.55;">BUILDER TYPE</div>
+          <div style="font-weight:700;font-size:12.5px;margin-top:4px;color:#B85A3C;">{{ receipt.builderType }}</div>
+          <div style="font-style:italic;font-size:10.5px;margin-top:6px;opacity:.85;">{{ receipt.blurb }}</div>
+          <hr style="border:none;border-top:1px dashed #C3B9A6;margin:12px 0;">
+          <div style="font-size:9px;letter-spacing:.6px;opacity:.55;">BUILDING</div>
+          <div style="margin-top:3px;">{{ receipt.project }}</div>
+          <hr style="border:none;border-top:1px dashed #C3B9A6;margin:12px 0;">
+          <div style="font-size:9px;letter-spacing:.6px;opacity:.55;">BUILDERS WHO INSPIRE YOU</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px;">
+            <sc-for list="{{ receipt.names }}" as="row" hint-placeholder-count="3">
+              <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline;"><span>{{ row.name }}</span><span style="text-align:right;opacity:.7;font-size:10px;">{{ row.adj }}</span></div>
+            </sc-for>
+          </div>
+          <hr style="border:none;border-top:1px dashed #C3B9A6;margin:12px 0;">
+          <div style="display:flex;justify-content:space-between;font-weight:700;"><span>TOTAL INSPIRATIONS</span><span>{{ receipt.count }}</span></div>
+          <div style="display:flex;justify-content:space-between;margin-top:3px;"><span style="font-size:9px;letter-spacing:.6px;opacity:.55;white-space:nowrap;">TOTAL VALUE</span><span style="color:#B85A3C;font-weight:700;flex:1;text-align:right;padding-left:10px;">{{ receipt.value }}</span></div>
+          <div style="height:30px;margin:16px 0 8px;background:repeating-linear-gradient(90deg,#2E2A24 0 2px,transparent 2px 5px,#2E2A24 5px 6px,transparent 6px 10px);"></div>
+          <div style="text-align:center;font-size:9.5px;font-weight:700;letter-spacing:.8px;opacity:.75;">KEEP THINKING, KEEP BUILDING</div>
+        </div>
+      </div>
+    </sc-if>
+
+    <div ref="{{ deviceRef }}" style="position:relative;width:min(88vw,352px);aspect-ratio:910/1245;z-index:2;">
+      <div style="position:absolute;left:14%;right:6%;bottom:-1.6%;height:5%;background:radial-gradient(ellipse at center, rgba(110,64,38,.34) 0%, rgba(110,64,38,0) 72%);filter:blur(4px);"></div>
+
+      <div style="position:absolute;inset:1.5% -1.8% -1% 1.8%;border-radius:47% 47% 46% 46%/52% 52% 39% 39%;background:linear-gradient(150deg,#A64C33 0%,#8E3D28 60%,#7A3220 100%);"></div>
+
+      <div style="position:absolute;inset:0;border-radius:47% 47% 46% 46%/52% 52% 39% 39%;background:radial-gradient(58% 34% at 30% 8%, rgba(255,240,228,.55) 0%, rgba(255,240,228,0) 66%),radial-gradient(46% 30% at 88% 62%, rgba(255,235,222,.22) 0%, rgba(255,235,222,0) 70%),radial-gradient(80% 60% at 82% 96%, rgba(74,26,10,.34) 0%, rgba(74,26,10,0) 62%),linear-gradient(158deg,#DC8265 0%,#D17356 40%,#BE6144 76%,#A85030 100%);box-shadow:inset 0 -30px 50px rgba(74,26,10,.30), inset 0 24px 40px rgba(255,228,210,.34), inset 20px -6px 34px rgba(255,228,210,.14), inset -22px 4px 38px rgba(74,26,10,.20), inset 0 0 0 1px rgba(255,238,226,.20), 0 12px 18px rgba(96,50,28,.14);">
+
+        <div style="position:absolute;left:36.5%;width:27%;top:6.5%;height:2.4%;border-radius:4px;background:linear-gradient(180deg,#6B3823,#7E4429);box-shadow:inset 0 2px 4px rgba(0,0,0,.5), 0 1px 0 rgba(255,238,226,.26);"></div>
+
+        <sc-if value="{{ eyesPrinting }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;left:25.5%;width:11.5%;top:14.5%;height:12%;">
+            <div style="position:absolute;left:0;width:45%;top:0;height:20.5%;background:linear-gradient(180deg,#63321F,#6E3923);box-shadow:inset 0 3px 6px rgba(0,0,0,.45);"></div>
+            <div style="position:absolute;left:27.5%;width:45%;top:20.5%;height:20.5%;background:linear-gradient(180deg,#673520,#733C25);box-shadow:inset 0 3px 6px rgba(0,0,0,.42);"></div>
+            <div style="position:absolute;left:55%;width:45%;top:41%;height:20.5%;background:linear-gradient(180deg,#6B3822,#7A4128);box-shadow:inset 0 3px 6px rgba(0,0,0,.4);"></div>
+            <div style="position:absolute;left:27.5%;width:45%;top:61.5%;height:20.5%;background:linear-gradient(180deg,#6E3A24,#7A4128);box-shadow:inset 0 3px 6px rgba(0,0,0,.4);"></div>
+            <div style="position:absolute;left:0;width:45%;top:82%;height:20.5%;background:linear-gradient(180deg,#703B25,#7A4128);box-shadow:inset 0 3px 6px rgba(0,0,0,.4);"></div>
+          </div>
+          <div style="position:absolute;left:63%;width:11.5%;top:14.5%;height:12%;">
+            <div style="position:absolute;right:0;width:45%;top:0;height:20.5%;background:linear-gradient(180deg,#63321F,#6E3923);box-shadow:inset 0 3px 6px rgba(0,0,0,.45);"></div>
+            <div style="position:absolute;right:27.5%;width:45%;top:20.5%;height:20.5%;background:linear-gradient(180deg,#673520,#733C25);box-shadow:inset 0 3px 6px rgba(0,0,0,.42);"></div>
+            <div style="position:absolute;right:55%;width:45%;top:41%;height:20.5%;background:linear-gradient(180deg,#6B3822,#7A4128);box-shadow:inset 0 3px 6px rgba(0,0,0,.4);"></div>
+            <div style="position:absolute;right:27.5%;width:45%;top:61.5%;height:20.5%;background:linear-gradient(180deg,#6E3A24,#7A4128);box-shadow:inset 0 3px 6px rgba(0,0,0,.4);"></div>
+            <div style="position:absolute;right:0;width:45%;top:82%;height:20.5%;background:linear-gradient(180deg,#703B25,#7A4128);box-shadow:inset 0 3px 6px rgba(0,0,0,.4);"></div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ eyesNormal }}" hint-placeholder-val="{{ true }}">
+          <div style="position:absolute;left:27.5%;width:7.5%;top:14%;height:13%;border-radius:5px;background:linear-gradient(180deg,#63321F,#7A4128);box-shadow:inset 0 4px 7px rgba(0,0,0,.45), 0 1px 0 rgba(255,238,226,.24);animation:eyeblink 7s infinite;transform-origin:center;"></div>
+          <div style="position:absolute;left:65%;width:7.5%;top:14%;height:13%;border-radius:5px;background:linear-gradient(180deg,#63321F,#7A4128);box-shadow:inset 0 4px 7px rgba(0,0,0,.45), 0 1px 0 rgba(255,238,226,.24);animation:eyeblink 7s infinite;transform-origin:center;"></div>
+        </sc-if>
+
+        <div style="position:absolute;left:7%;width:86%;top:30%;height:21%;border-radius:16px;background:linear-gradient(180deg,#D6DEC2 0%,#C7D2AD 100%);box-shadow:inset 0 5px 10px rgba(74,26,10,.26), inset 0 -2px 0 rgba(255,255,255,.35), 0 1px 0 rgba(255,238,226,.24);padding:3% 7%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;overflow:hidden;color:#3B3A22;text-align:center;">
+          <div style="font-size:clamp(7px,2.2vw,9.5px);letter-spacing:1.2px;opacity:.65;text-transform:uppercase;">{{ promptLine }}</div>
+          <div style="font-size:clamp(7px,2.35vw,10px);letter-spacing:.7px;line-height:1.35;min-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;">{{ typedLine }}<span style="display:inline-block;width:6px;height:12px;background:#3B3A22;margin-left:3px;vertical-align:-2px;animation:curblink 1s step-end infinite;"></span></div>
+        </div>
+
+        <button onClick="{{ pressBot }}" aria-label="Submit" style="position:absolute;left:43%;width:14%;top:47.4%;height:6.2%;background:transparent;border:none;outline:none;-webkit-tap-highlight-color:transparent;padding:0;cursor:pointer;animation:nudge 3.4s ease-in-out infinite;" style-active="transform:translateY(3px);animation:none;">
+          <div style="position:absolute;left:-14%;right:-14%;top:-30%;height:89%;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#CD7354 0%,#C56C4D 100%);"></div>
+          <div style="position:absolute;left:0;width:12%;top:26%;height:22%;background:#5C3020;"></div>
+          <div style="position:absolute;right:0;width:12%;top:26%;height:22%;background:#5C3020;"></div>
+          <div style="position:absolute;left:12%;right:12%;top:0;height:74%;background:linear-gradient(168deg,#65341F,#4E2617);box-shadow:inset 0 1px 0 rgba(255,236,222,.16);"></div>
+          <div style="position:absolute;left:22%;width:11%;top:28%;height:18%;background:#F4EEDD;"></div>
+          <div style="position:absolute;left:67%;width:11%;top:28%;height:18%;background:#F4EEDD;"></div>
+          <div style="position:absolute;left:12%;width:10%;top:74%;height:26%;background:#5C3020;"></div>
+          <div style="position:absolute;left:28%;width:10%;top:74%;height:26%;background:#5C3020;"></div>
+          <div style="position:absolute;left:60%;width:10%;top:74%;height:26%;background:#5C3020;"></div>
+          <div style="position:absolute;left:78%;width:10%;top:74%;height:26%;background:#5C3020;"></div>
+        </button>
+
+        <div style="position:absolute;left:14%;width:72%;top:60%;height:23%;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:1fr;gap:7% 4%;">
+          <button data-k="A" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">A</button>
+          <button data-k="B" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">B</button>
+          <button data-k="C" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">C</button>
+          <button data-k="D" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">D</button>
+          <button data-k="E" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">E</button>
+          <button data-k="F" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">F</button>
+          <button data-k="G" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">G</button>
+          <button data-k="H" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">H</button>
+          <button data-k="I" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">I</button>
+          <button data-k="J" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">J</button>
+          <button data-k="K" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">K</button>
+          <button data-k="L" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">L</button>
+          <button data-k="M" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">M</button>
+          <button data-k="N" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">N</button>
+          <button data-k="O" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">O</button>
+          <button data-k="P" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">P</button>
+          <button data-k="Q" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">Q</button>
+          <button data-k="R" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">R</button>
+          <button data-k="S" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">S</button>
+          <button data-k="T" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">T</button>
+          <button data-k="U" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">U</button>
+          <button data-k="V" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">V</button>
+          <button data-k="W" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">W</button>
+          <button data-k="X" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">X</button>
+          <button data-k="Y" onClick="{{ handleKey }}" style="grid-column:1;background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">Y</button>
+          <button data-k="Z" onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">Z</button>
+          <button data-k="SPACE" onClick="{{ handleKey }}" style="grid-column:span 2;background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:14%/34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(6px,1.7vw,8.5px);letter-spacing:1px;box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">SPACE</button>
+          <button data-k="DEL" onClick="{{ handleKey }}" aria-label="Backspace" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(8px,2.6vw,13px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">⌫</button>
+          <button data-k="," onClick="{{ handleKey }}" style="background:linear-gradient(168deg,#FBF6E9,#EEE4CC);border:none;border-radius:34%;color:#5A3524;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(7px,2.2vw,11px);box-shadow:0 3px 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.9), inset 0 -3px 5px rgba(170,140,100,.16);cursor:pointer;display:flex;align-items:center;justify-content:center;min-width:0;padding-bottom:22%;" style-active="transform:translateY(3px);box-shadow:0 0 0 #C7B195, inset 0 1px 0 rgba(255,255,255,.6);">,</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;font-size:11px;letter-spacing:.4px;opacity:.6;text-align:center;max-width:min(92vw,420px);line-height:1.6;display:flex;flex-direction:column;gap:2px;"><span>{{ hint }}</span><span>{{ hintTwo }}</span></div>
+
+  <sc-if value="{{ printed }}" hint-placeholder-val="{{ false }}">
+    <div style="margin-top:18px;display:flex;gap:10px;">
+      <button onClick="{{ share }}" style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.6px;padding:9px 15px;border-radius:6px;border:1px solid #C1664A;background:#FBF6EA;color:#9C4530;cursor:pointer;" style-hover="background:#F3E8D8;">SAVE RECEIPT</button>
+      <button onClick="{{ reset }}" style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.6px;padding:9px 15px;border-radius:6px;border:1px solid #C1664A;background:#FBF6EA;color:#9C4530;cursor:pointer;" style-hover="background:#F3E8D8;">START A NEW ONE</button>
+    </div>
+  </sc-if>
+
+  <button onClick="{{ toggleMute }}" style="position:fixed;right:18px;bottom:18px;z-index:20;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:1px;padding:7px 13px;border-radius:20px;border:1px solid rgba(158,69,48,.4);background:rgba(251,246,234,.85);color:#9E4530;cursor:pointer;opacity:.8;" style-hover="opacity:1;background:rgba(243,232,216,.95);">{{ muteLabel }}</button>
+
+  <div style="margin-top:26px;font-size:10px;letter-spacing:.4px;color:#000;text-align:center;">Built enthusiastically by <a href="https://thedigitalbuff.com/" target="_blank" rel="noopener">The Digital Buff</a></div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;venue&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;CLAUDE BUILDERS DESERVE RECEIPTS&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;sound&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;aiPersona&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;personaEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.sharonjacob.com/wp-json/claude-receipt/v1/persona&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;AI&quot;},&quot;music&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Audio&quot;},&quot;musicVolume&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.07,&quot;min&quot;:0,&quot;max&quot;:0.5,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Audio&quot;}}">
+const STEPS = [
+  { key: "name", prompt: "Who's building?" },
+  { key: "project", prompt: "What are you building?" },
+  { key: "people", prompt: "Builders who inspire you" }
+];
+
+const ADJ = ["Priceless","Invaluable","One of a kind","Pure gold","Sets the bar","Future collaborator","Ships relentlessly","Keep them close","Quietly brilliant","Limited edition","Instant classic","Highly recommended","Makes it look easy","Raises everyone's game","Worth studying","Built different"];
+
+const FALLBACK = [
+  { builderType: "Midnight Debugger", blurb: "You ship first and sleep later. Somewhere, a console.log is still running." },
+  { builderType: "Idea Sprinter", blurb: "You had three product ideas before lunch. Only one of them needs a name yet." },
+  { builderType: "Quiet Architect", blurb: "You think in systems and speak in diagrams. Everyone finds out later how right you were." },
+  { builderType: "Serial Prototyper", blurb: "Eleven tabs open, each one a different version of the same big idea." },
+  { builderType: "Community Builder", blurb: "You build in public and lift others while you do it. The best kind of compounding." }
+];
+
+const VALUES = ["Immeasurable","Off the charts","Worth every minute","Priceless","Compounding daily","Better than the estimate","Shipped and grateful","Worth building for","Hard to quantify","Growing every commit","Paid forward","Well above baseline"];
+
+const VOID_FALLBACK = [
+  { builderType: "Vaporware Enthusiast", blurb: "Building nothing, and building it well. The roadmap is a blank page and the deadline is never." },
+  { builderType: "Null Pointer", blurb: "You typed nothing and expected something. Classic. The receipt printed anyway." },
+  { builderType: "Pre Idea Stage", blurb: "Currently between projects, which is a generous way of saying the folder is still empty." },
+  { builderType: "Undefined Behavior", blurb: "No project detected. The compiler shrugged and printed this receipt out of politeness." },
+  { builderType: "Professional Lurker", blurb: "Here for the vibes, shipping nothing. Somebody has to hold the room together." },
+  { builderType: "Empty Repository", blurb: "Zero commits, one README, infinite promise. The promise remains unexercised." },
+  { builderType: "Placeholder Text", blurb: "Whatever this is, it is not a project. The printer noticed and printed anyway." }
+];
+
+const VOID_VALUES = ["Zero, but rounded up", "Pending", "Unquantifiable, sadly", "Refund requested", "Zero and holding"];
+
+const IDLE_RE = /(doomscroll|scroll|procrastinat|nap|sleep|nothing much|netflix|tiktok|instagram|twitter|reddit|youtube|binge|snack|slack off|goof|waiting|overthink|refresh|lurk|wander|vibe check|touch grass)/i;
+const IDLE_VALUES = ["Bored, and so am I", "Negative, somehow", "Time well wasted", "Charged to your attention span", "Bill sent to your dopamine", "Discipline not included", "Minus one afternoon"];
+
+const VOID_RE = /^(n\/?a|nothing( much| yet| really| at all)?|none|nope|nah|idk|i dont know|i don'?t know|no idea|dunno|tbd|nil|null|zero|zilch|nada|not sure|unsure|\?+|-+|\.+|meh|no|blank|empty|undefined|nonsense|garbage|junk|rubbish|whatever|anything|something|stuff|things|random|gibberish|test(ing)?|sample|placeholder|example|foo|bar|foobar|asdf+|qwerty|lorem ipsum|air|vibes|chaos)$/i;
+function isVoid(s) {
+  const t = String(s || "").trim().replace(/[.!?]+$/, "");
+  if (!t) return true;
+  if (VOID_RE.test(t)) return true;
+  if (t.length <= 2) return true;
+  if (!/[aeiouy]/i.test(t.replace(/\s/g, ""))) return true;      // no vowels, e.g. "sdfgh"
+  if (/^(.)\1{2,}$/i.test(t.replace(/\s/g, ""))) return true;    // "aaaa"
+  return false;
+}
+
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const titleCase = s => (s || "").toLowerCase().replace(/(^|\s)\S/g, c => c.toUpperCase());
+const stripArticle = s => String(s || "").replace(/^\s*(the|a|an)\s+/i, "");
+function shuffled(a) {
+  const c = a.slice();
+  for (let i = c.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [c[i], c[j]] = [c[j], c[i]]; }
+  return c;
+}
+
+class Component extends DCLogic {
+  state = { started: false, step: 0, buffer: "", printing: false, printed: false, receipt: null, muted: false, paperFlow: false, feeding: false };
+
+  constructor(props) {
+    super(props);
+    this.captureRef = React.createRef();
+    this.paperRef = React.createRef();
+    this.deviceRef = React.createRef();
+    this.answers = {};
+    this.onKeyDown = this.onKeyDown.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener("keydown", this.onKeyDown);
+    this.printerEl();
+    this.musicEl();
+  }
+
+  musicEl() {
+    if (!this._music) {
+      const m = new Audio((window.__AUDIO && window.__AUDIO.music) || "https://www.sharonjacob.com/wp-content/uploads/2026/09/Cute-Circus.mp3");
+      m.preload = "auto";
+      m.loop = true;
+      m.volume = 0;
+      this._music = m;
+    }
+    return this._music;
+  }
+
+  get musicTarget() {
+    const v = this.props.musicVolume;
+    return typeof v === "number" ? Math.max(0, Math.min(1, v)) : 0.07;
+  }
+
+  startMusic() {
+    if (this.state.muted || this.props.music === false) return;
+    const m = this.musicEl();
+    if (!m.paused) return;
+    m.loop = true;
+    m.volume = 0;
+    const p = m.play();
+    if (p && p.then) p.then(() => this.fadeMusic(this.musicTarget, 1200)).catch(err => { console.error("Background music failed:", err); });
+    else this.fadeMusic(this.musicTarget, 1200);
+  }
+
+  fadeMusic(to, ms) {
+    const m = this.musicEl();
+    clearInterval(this._fade);
+    const from = m.volume, steps = Math.max(1, Math.round(ms / 40));
+    let i = 0;
+    this._fade = setInterval(() => {
+      i++;
+      m.volume = Math.max(0, Math.min(1, from + (to - from) * (i / steps)));
+      if (i >= steps) {
+        clearInterval(this._fade);
+        if (to === 0) m.pause();
+      }
+    }, 40);
+  }
+
+  toggleMute() {
+    const muted = !this.state.muted;
+    this.setState({ muted });
+    if (muted) this.fadeMusic(0, 300);
+    else { const m = this.musicEl(); const p = m.play(); if (p && p.catch) p.catch(() => {}); this.fadeMusic(this.musicTarget, 600); }
+  }
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this.onKeyDown);
+    clearInterval(this._fade);
+    if (this._music) this._music.pause();
+    this.stopFeed();
+  }
+
+  get soundOn() { return this.props.sound !== false; }
+
+  ctx() {
+    if (!this._ctx) this._ctx = new (window.AudioContext || window.webkitAudioContext)();
+    if (this._ctx.state === "suspended") this._ctx.resume();
+    return this._ctx;
+  }
+
+  // soft wooden marimba-ish note
+  note(freq, when, dur, peak, type) {
+    if (!this.soundOn) return;
+    try {
+      const ctx = this.ctx(), t0 = ctx.currentTime + (when || 0);
+      const osc = ctx.createOscillator(), g = ctx.createGain(), lp = ctx.createBiquadFilter();
+      osc.type = type || "triangle";
+      osc.frequency.setValueAtTime(freq, t0);
+      lp.type = "lowpass"; lp.frequency.setValueAtTime(Math.min(6000, freq * 6), t0);
+      g.gain.setValueAtTime(0.0001, t0);
+      g.gain.linearRampToValueAtTime(peak, t0 + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+      osc.connect(lp).connect(g).connect(ctx.destination);
+      osc.start(t0); osc.stop(t0 + dur + 0.03);
+    } catch (e) {}
+  }
+
+  // short filtered-noise click (keys, paper ticks)
+  click(when, peak, freq, q) {
+    if (!this.soundOn) return;
+    try {
+      const ctx = this.ctx(), t0 = ctx.currentTime + (when || 0), len = 0.045;
+      const buf = ctx.createBuffer(1, Math.ceil(ctx.sampleRate * len), ctx.sampleRate);
+      const d = buf.getChannelData(0);
+      for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / d.length);
+      const src = ctx.createBufferSource(); src.buffer = buf;
+      const bp = ctx.createBiquadFilter(); bp.type = "bandpass";
+      bp.frequency.setValueAtTime(freq || 1500, t0); bp.Q.value = q || 1.2;
+      const g = ctx.createGain();
+      g.gain.setValueAtTime(peak || 0.06, t0);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + len);
+      src.connect(bp).connect(g).connect(ctx.destination);
+      src.start(t0);
+    } catch (e) {}
+  }
+
+  keyTick() { this.click(0, 0.05, 2200 + Math.random() * 500, 2); this.note(1046, 0, 0.06, 0.015, "sine"); }
+  confirmSound() { this.note(659.25, 0, 0.22, 0.07); this.note(987.77, 0.06, 0.26, 0.05); }
+  startSound() {
+    // warm rising arpeggio, felt-piano character
+    this.note(392, 0, 0.5, 0.075);
+    this.note(523.25, 0.1, 0.5, 0.07);
+    this.note(783.99, 0.2, 0.7, 0.055);
+    this.note(1046.5, 0.3, 0.9, 0.03, "sine");
+  }
+  // paper feed: recorded printer sound
+  printerEl() {
+    if (!this._feed) {
+      const printerAudio = new Audio((window.__AUDIO && window.__AUDIO.printer) || "https://www.sharonjacob.com/wp-content/uploads/2026/09/printing-effect.mp3");
+      printerAudio.preload = "auto";
+      printerAudio.volume = 1;
+      this._feed = printerAudio;
+    }
+    return this._feed;
+  }
+  startFeed() {
+    if (!this.soundOn) return;
+    try {
+      const a = this.printerEl();
+      a.volume = 1;
+      a.currentTime = 0;
+      const p = a.play();
+      if (p && p.catch) p.catch(() => {});
+    } catch (e) {}
+  }
+  stopFeed() {
+    if (!this._feed) return;
+    try { this._feed.pause(); this._feed.currentTime = 0; } catch (e) {}
+  }
+
+  type(c) {
+    if (!this.state.started || this.state.printing) return;
+    this.keyTick();
+    this.setState(s => ({ buffer: (s.buffer + c).slice(0, 90) }));
+  }
+
+  onKeyDown(e) {
+    if (!this.state.started || this.state.printing) return;
+    if (e.key === "Enter") { e.preventDefault(); this.submit(); return; }
+    if (e.key === "Backspace") { e.preventDefault(); this.setState(s => ({ buffer: s.buffer.slice(0, -1) })); return; }
+    if (e.key === " " || e.key === ",") { e.preventDefault(); this.type(e.key); return; }
+    if (/^[a-zA-Z]$/.test(e.key)) this.type(e.key.toUpperCase());
+  }
+
+  submit() {
+    if (!this.state.started) {
+      this.startSound();
+      this.setState({ started: true, step: 0, buffer: "" });
+      return;
+    }
+    if (this.state.printing) return;
+    const val = this.state.buffer.trim();
+    if (!val) return;
+    this.answers[STEPS[this.state.step].key] = val;
+    this.confirmSound();
+    // start generating the persona as soon as the project is known, so printing is instant
+    if (STEPS[this.state.step].key === "project") this._personaPromise = this.persona();
+    if (this.state.step < STEPS.length - 1) this.setState(s => ({ step: s.step + 1, buffer: "" }));
+    else this.print();
+  }
+
+  async print() {
+    this.setState({ printing: true, buffer: "" });
+    this.startFeed();
+    const [persona] = await Promise.all([
+      this._personaPromise || this.persona(),
+      new Promise(r => setTimeout(r, 260))
+    ]);
+    const names = (this.answers.people || "").split(",").map(n => n.trim()).filter(Boolean).map(titleCase);
+    const adjs = shuffled(ADJ);
+    const receipt = {
+      date: new Date().toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }),
+      builder: titleCase(this.answers.name),
+      builderType: stripArticle(persona.builderType),
+      blurb: persona.blurb,
+      project: titleCase(this.answers.project),
+      names: names.length
+        ? names.map((n, i) => ({ name: "1x " + n, adj: adjs[i % adjs.length] }))
+        : [{ name: "no names logged", adj: "Next time" }],
+      count: names.length,
+      value: isVoid(this.answers.project) ? pick(VOID_VALUES) : (IDLE_RE.test(this.answers.project || "") ? pick(IDLE_VALUES) : pick(VALUES))
+    };
+    this.setState({ printing: false, printed: true, paperFlow: false, receipt, feeding: true });
+    clearTimeout(this._feedEyes);
+    this._feedEyes = setTimeout(() => this.setState({ feeding: false }), 3000);
+    clearTimeout(this._settle);
+    this._settle = setTimeout(() => {
+      const dev = this.deviceRef.current;
+      const before = dev ? dev.getBoundingClientRect().top : 0;
+      this.setState({ paperFlow: true }, () => {
+        requestAnimationFrame(() => {
+          const after = dev ? dev.getBoundingClientRect().top : 0;
+          const delta = after - before;
+          if (delta) window.scrollBy(0, delta);
+          const paper = this.paperRef.current;
+          if (paper) {
+            const box = paper.getBoundingClientRect();
+            if (box.top < 12) window.scrollBy({ top: box.top - 24, behavior: "smooth" });
+          }
+        });
+      });
+    }, 1600);
+  }
+
+  async personaFromEndpoint() {
+    const url = this.props.personaEndpoint ?? "https://www.sharonjacob.com/wp-json/claude-receipt/v1/persona";
+    if (!url) return null;
+    try {
+      const ctl = new AbortController();
+      const timer = setTimeout(() => ctl.abort(), 15000);
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: this.answers.name, project: this.answers.project }),
+        signal: ctl.signal
+      });
+      clearTimeout(timer);
+      if (!res.ok) return null;
+      const data = await res.json();
+      if (data && data.builderType && data.blurb) return data;
+    } catch (e) {}
+    return null;
+  }
+
+  async persona() {
+    if (isVoid(this.answers.project)) return pick(VOID_FALLBACK);
+    if (this.props.aiPersona === false) return pick(FALLBACK);
+    const remote = await this.personaFromEndpoint();
+    if (remote) return remote;
+    if (!window.claude || !window.claude.complete) return pick(FALLBACK);
+    try {
+      const out = await window.claude.complete(
+        'You write short, whimsical "builder personality" copy for a receipt printed for builders who use Claude. Someone named ' +
+        this.answers.name + ' is building: "' + this.answers.project + '".\n\n' +
+        'Return ONLY raw JSON, no markdown fences, no preamble, no em dashes anywhere, in this exact shape:\n' +
+        '{"builderType":"a punchy 2-4 word title like a receipt category, do NOT start it with The, A or An (e.g. Midnight Debugger)","blurb":"one warm witty sentence, max 22 words, playful retro receipt printer voice, references their project loosely, no coffee or event references, no em dashes"}\n\nTone rule: never congratulate, never call anything magnificent, amazing or an achievement, never use exclamation marks. Dry and warm, not gushing. If the project is blank, dismissive, nonsense or a placeholder (nothing, idk, nonsense, asdf), do NOT praise it or spin it as pure potential. Be flatly, deadpan funny about the absence of a project, the way a receipt printer would be.'
+      );
+      const parsed = JSON.parse(String(out).replace(/```json|```/g, "").trim());
+      if (parsed.builderType && parsed.blurb) return parsed;
+    } catch (e) {}
+    return pick(FALLBACK);
+  }
+
+  reset() {
+    this.answers = {};
+    this._personaPromise = null;
+    clearTimeout(this._feedEyes);
+    this.stopFeed();
+    clearTimeout(this._settle);
+    this.setState({ started: false, step: 0, buffer: "", printing: false, printed: false, paperFlow: false, feeding: false, receipt: null });
+  }
+
+async share() {
+    const root = this.captureRef.current;
+    if (!root) return;
+    const splitShadows = s => {
+      const out = []; let depth = 0, cur = "";
+      for (const ch of s) {
+        if (ch === "(") depth++;
+        if (ch === ")") depth--;
+        if (ch === "," && depth === 0) { out.push(cur); cur = ""; } else cur += ch;
+      }
+      out.push(cur);
+      return out.map(x => x.trim()).filter(Boolean);
+    };
+    try {
+      root.id = "shareRoot";
+      const originals = Array.from(root.querySelectorAll("*")).map(el => {
+        const r = el.getBoundingClientRect();
+        const cs = getComputedStyle(el);
+        return { w: r.width, h: r.height, radius: cs.borderRadius, shadow: cs.boxShadow };
+      });
+      const canvas = await window.html2canvas(root, {
+        backgroundColor: "#F6F1E7",
+        scale: 2,
+        useCORS: true,
+        onclone: doc => {
+          const cloneRoot = doc.getElementById("shareRoot");
+          if (!cloneRoot) return;
+          cloneRoot.style.padding = "28px 22px 34px";
+          const nodes = Array.from(cloneRoot.querySelectorAll("*"));
+          nodes.forEach((el, i) => {
+            const o = originals[i];
+            if (!o) return;
+            el.style.animation = "none";
+            // % radii render badly in html2canvas on small parts -> resolve to px
+            if (o.radius.indexOf("%") !== -1 && Math.max(o.w, o.h) < 130) {
+              const pct = parseFloat(o.radius) || 30;
+              el.style.borderRadius = Math.round(Math.min(o.w, o.h) * pct / 100) + "px";
+            }
+            if (o.shadow && o.shadow !== "none") {
+              const keep = splitShadows(o.shadow).filter(s => s.indexOf("inset") === -1);
+              el.style.boxShadow = keep.length ? keep.join(", ") : "none";
+            }
+          });
+          // paper normally tucks behind the device; separate it so nothing overlaps
+          const paper = cloneRoot.firstElementChild;
+          if (paper) { paper.style.marginBottom = "18px"; paper.style.zIndex = "auto"; }
+          const device = cloneRoot.lastElementChild;
+          if (device) device.style.zIndex = "auto";
+        }
+      });
+      const link = document.createElement("a");
+      link.download = "claude-and-coffee-receipt.png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    } catch (e) { alert("Couldn't generate the image right now. Try again in a moment."); }
+  }
+
+  renderVals() {
+    const { started, step, buffer, printing, printed, receipt } = this.state;
+    const venue = this.props.venue ?? "CLAUDE BUILDERS DESERVE RECEIPTS";
+    let hintTwo = "";
+    let promptLine = "PRESS THE BOT TO BEGIN", typedLine = venue, hint = "Press Claude Bot in the center to begin";
+    if (printing) { promptLine = "PRINTING"; typedLine = "..."; hint = "Printing your receipt..."; }
+    else if (printed) { promptLine = "RECEIPT PRINTED"; typedLine = venue; hint = "Keep it. Keep thinking, keep building."; }
+    else if (started) {
+      promptLine = STEPS[step].prompt;
+      typedLine = buffer;
+      hint = "Type on the keys, then press the bot to submit.";
+      hintTwo = step === 2 ? "Commas separate names." : "";
+    }
+    return {
+      promptLine, typedLine, hint, hintTwo, printed,
+      eyesPrinting: printing || this.state.feeding, eyesNormal: !(printing || this.state.feeding),
+      muteLabel: this.state.muted ? "MUSIC OFF" : "MUSIC ON",
+      toggleMute: () => this.toggleMute(),
+      receipt: receipt || { date: "", builder: "", builderType: "", blurb: "", project: "", names: [], count: 0, value: "" },
+      captureRef: this.captureRef,
+      paperRef: this.paperRef,
+      deviceRef: this.deviceRef,
+      paperStyle: this.state.paperFlow
+        ? { width: "min(72vw,268px)", marginBottom: -26, position: "relative", zIndex: 0 }
+        : { width: "min(72vw,268px)", position: "absolute", left: "50%", transform: "translateX(-50%)", bottom: "calc(100% - 26px)", zIndex: 0, display: "grid", gridTemplateRows: "1fr", overflow: "hidden", animation: "feedReveal 1.5s cubic-bezier(.25,.9,.3,1) both" },
+      handleKey: e => {
+        const k = e.currentTarget.dataset.k;
+        if (k === "DEL") {
+          if (!this.state.started || this.state.printing) return;
+          this.keyTick();
+          this.setState(s => ({ buffer: s.buffer.slice(0, -1) }));
+          return;
+        }
+        this.type(k === "SPACE" ? " " : k);
+      },
+      pressBot: () => { this.startMusic(); this.submit(); },
+      reset: () => this.reset(),
+      share: () => this.share()
+    };
+  }
+}
+
+</script>
+</body>
+</html>
